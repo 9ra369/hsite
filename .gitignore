@@ -1,0 +1,15 @@
+# Houdini caches
+**/config/Icons/
+*.cache
+*.pyc
+__pycache__/
+
+# backups
+*.bak
+backup/
+*_bak*.hip
+*.hip.autosave
+
+# OS
+Thumbs.db
+desktop.ini

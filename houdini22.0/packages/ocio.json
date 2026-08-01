@@ -1,0 +1,8 @@
+{
+  "enable" : true,
+  "show" : true,
+  "load_package_once" : true,
+  "env": [
+	{"OCIO" : "${OCIO-C:/Users/kuram/Documents/houdini20.5/ocio/houdini-config-v2.1.0_aces-v1.3_ocio-v2.3.ocio}"}
+  ]
+}

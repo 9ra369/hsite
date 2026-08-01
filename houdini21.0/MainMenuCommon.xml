@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mainMenu>
+  <menuBar>
+    <subMenu id="krm_tool_menu">
+      <insertBefore>help_menu</insertBefore>
+      <label>krm Tool</label>
+
+      <scriptItem id="show_env">
+        <label>Show Env</label>
+        <scriptPath>$HOU_COMMON/scripts/krm_tool/env_viewer.py</scriptPath>
+      </scriptItem>
+
+    </subMenu>
+  </menuBar>
+</mainMenu>

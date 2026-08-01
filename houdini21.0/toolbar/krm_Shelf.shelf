@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <toolshelf name="krm_Shelf" label="krm_Shelf">
+    <memberTool name="krm_polyhaven"/>
+    <memberTool name="krm_quick_renamer"/>
+  </toolshelf>
+  <tool name="krm_polyhaven" label="Poly Haven" icon="C:/Users/kuram/Documents/HoudiniCommon/icons/polyHaven.png">
+    <helpText><![CDATA[Poly Haven のアセットをダウンロードして読み込む]]></helpText>
+    <script scriptType="python"><![CDATA[
+import importlib
+import poly_haven_downloader
+importlib.reload(poly_haven_downloader)
+poly_haven_downloader.show()
+]]></script>
+  </tool>
+  <tool name="krm_quick_renamer" label="Quick Renamer" icon="C:/Users/kuram/Documents/HoudiniCommon/icons/icon_quick_renamer.png">
+    <helpText><![CDATA[選択したノードを一括リネームする]]></helpText>
+    <script scriptType="python"><![CDATA[
+import importlib
+import quick_renamer
+importlib.reload(quick_renamer)
+]]></script>
+  </tool>
+</shelfDocument>
