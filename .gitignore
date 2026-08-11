@@ -13,3 +13,6 @@ backup/
 # OS
 Thumbs.db
 desktop.ini
+
+# Local knowledge notes (not for version control)
+/_knowledge/

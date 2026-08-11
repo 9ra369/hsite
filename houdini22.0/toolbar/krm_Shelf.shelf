@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
   <toolshelf name="krm_Shelf" label="krm_Shelf">
     <memberTool name="krm_polyhaven"/>
     <memberTool name="krm_quick_renamer"/>
+    <memberTool name="tool_1"/>
+    <memberTool name="krm_save_next_version"/>
   </toolshelf>
-  <tool name="krm_polyhaven" label="Poly Haven" icon="C:/Users/kuram/Documents/HoudiniCommon/icons/polyHaven.png">
-    <helpText><![CDATA[Poly Haven のアセットをダウンロードして読み込む]]></helpText>
+
+  <tool name="krm_polyhaven" label="Poly Haven" icon="C:\Users\kuram\Documents\hsite\houdini22.0\icons\polyHaven.png">
+    <helpText><![CDATA[Poly Haven ]]></helpText>
     <script scriptType="python"><![CDATA[
 import importlib
 import poly_haven_downloader
@@ -13,12 +21,26 @@ importlib.reload(poly_haven_downloader)
 poly_haven_downloader.show()
 ]]></script>
   </tool>
-  <tool name="krm_quick_renamer" label="Quick Renamer" icon="C:/Users/kuram/Documents/HoudiniCommon/icons/icon_quick_renamer.png">
-    <helpText><![CDATA[選択したノードを一括リネームする]]></helpText>
+
+  <tool name="krm_quick_renamer" label="Quick Renamer" icon="C:\Users\kuram\Documents\hsite\houdini22.0\icons\icon_quick_renamer.png">
     <script scriptType="python"><![CDATA[
 import importlib
 import quick_renamer
 importlib.reload(quick_renamer)
+]]></script>
+  </tool>
+
+  <tool name="krm_save_next_version" label="Save Next Version" icon="">
+    <helpText><![CDATA[Save the current hip file with its version number incremented by one.]]></helpText>
+    <script scriptType="python"><![CDATA[
+import importlib.util
+
+# save_next_version.py はロード（exec_module）されたトップレベルで
+# save_next_version() を直接呼び出すので、ここで改めて呼ぶ必要はない。
+script_path = hou.expandString("$HSITE/houdini22.0/scripts/krm_tool/save_next_version.py")
+spec = importlib.util.spec_from_file_location("krm_save_next_version", script_path)
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
 ]]></script>
   </tool>
 </shelfDocument>

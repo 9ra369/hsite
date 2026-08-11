@@ -7,7 +7,12 @@
 
       <scriptItem id="show_env">
         <label>Show Env</label>
-        <scriptPath>$HOU_COMMON/scripts/krm_tool/env_viewer.py</scriptPath>
+        <scriptPath>$HSITE/houdini22.0/scripts/krm_tool/env_viewer.py</scriptPath>
+      </scriptItem>
+
+      <scriptItem id="save_next_version">
+        <label>Save Next Version</label>
+        <scriptPath>$HSITE/houdini22.0/scripts/krm_tool/save_next_version.py</scriptPath>
       </scriptItem>
 
     </subMenu>
