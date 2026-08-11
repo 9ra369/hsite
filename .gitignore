@@ -16,3 +16,6 @@ desktop.ini
 
 # Local knowledge notes (not for version control)
 /_knowledge/
+
+# Claude Code instruction file (local only, not for version control)
+/CLAUDE.md
