@@ -1,0 +1,12 @@
+{
+    "env": [
+        { "WINDOW_TOOL": "$HSITE/dev/houdini_window_tool" },
+        {
+            "PYTHONPATH": {
+                "value": "$WINDOW_TOOL/python",
+                "method": "append"
+            }
+        }
+    ],
+    "path": "$WINDOW_TOOL"
+}
