@@ -10,7 +10,7 @@
 hsite/
 └── houdini22.0/
     ├── otls/            # HDA
-    ├── python3.11libs/  # Python モジュール（起動時に自動で sys.path に入る）
+    ├── python3.13libs/  # Python モジュール（起動時に自動で sys.path に入る。21.0 は python3.11libs）
     ├── scripts/         # 起動スクリプト等
     ├── toolbar/         # シェルフ
     ├── desktop/         # デスクトップレイアウト
@@ -54,7 +54,7 @@ $HFS
 
 - **HDA** — 前方互換のみ。新しいバージョンで保存すると古いバージョンで開けなくなる
 - **`desktop/`、`toolbar/`** — フォーマットがバージョン間で変わる
-- **`python3.11libs/`** — フォルダ名自体が Python バージョンに束縛される
+- **`python3.xxlibs/`** — フォルダ名自体が Python バージョンに束縛される（21.0 は `python3.11libs`、22.0 は `python3.13libs`）
 
 バージョンを上げる際は `houdiniX.Y/` を丸ごとコピーし、HDA を開いて保存し直す。移行作業の手間より、共有して壊れたときの原因究明の方がコストが高いという判断。
 

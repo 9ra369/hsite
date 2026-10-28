@@ -19,3 +19,6 @@ desktop.ini
 
 # Claude Code instruction file (local only, not for version control)
 /CLAUDE.md
+
+# Local-only tool (not for version control)
+/houdini22.0/toolbar/arcel.shelf
