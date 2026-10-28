@@ -22,3 +22,7 @@ desktop.ini
 
 # Local-only tool (not for version control)
 /houdini22.0/toolbar/arcel.shelf
+
+# Python virtual environments
+.venv/
+venv/
