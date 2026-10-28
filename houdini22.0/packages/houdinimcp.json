@@ -1,0 +1,12 @@
+{
+  "load_package_once": true,
+  "version": "0.1",
+  "env": [
+    {
+      "PYTHONPATH": {
+        "value": "$HOUDINI_PACKAGE_PATH/../scripts/python",
+        "method": "append"
+      }
+    }
+  ]
+}
