@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Favorite Nodes</title>
+
+  <!-- wires -->
+  <g fill="none" stroke="#9298a2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 19 V26 H33 V32"/>
+    <path d="M49 19 V26"/>
+  </g>
+
+  <!-- nodes -->
+  <g stroke="#9298a2" stroke-width="2">
+    <rect x="6" y="7" width="22" height="12" rx="3" fill="#2a2c31"/>
+    <rect x="38" y="7" width="22" height="12" rx="3" fill="#2a2c31"/>
+    <rect x="22" y="32" width="22" height="12" rx="3" fill="#2a2c31"/>
+  </g>
+
+  <!-- node flags -->
+  <g fill="#8fbf6b">
+    <rect x="7" y="8" width="4" height="10" rx="2"/>
+    <rect x="39" y="8" width="4" height="10" rx="2"/>
+    <rect x="23" y="33" width="4" height="10" rx="2"/>
+  </g>
+
+  <!-- save badge -->
+  <g>
+    <rect x="36" y="38" width="26" height="24" rx="4" fill="#eda94a"/>
+    <path d="M49 43 V52 M45 48 L49 52 L53 48"
+          fill="none" stroke="#1e1608" stroke-width="3"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M43 57 H55" fill="none" stroke="#1e1608" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

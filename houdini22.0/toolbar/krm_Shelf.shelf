@@ -8,8 +8,9 @@
   <toolshelf name="krm_Shelf" label="krm_Shelf">
     <memberTool name="krm_polyhaven"/>
     <memberTool name="krm_quick_renamer"/>
-    <memberTool name="tool_1"/>
-    <memberTool name="krm_save_next_version"/>
+    <memberTool name="krm_favorite_nodes"/>
+    <memberTool name="krm_vfl_sync"/>
+    <memberTool name="dem_import"/>
   </toolshelf>
 
   <tool name="krm_polyhaven" label="Poly Haven" icon="C:\Users\kuram\Documents\hsite\houdini22.0\icons\polyHaven.png">
@@ -30,17 +31,22 @@ importlib.reload(quick_renamer)
 ]]></script>
   </tool>
 
-  <tool name="krm_save_next_version" label="Save Next Version" icon="">
-    <helpText><![CDATA[Save the current hip file with its version number incremented by one.]]></helpText>
+  <tool name="krm_favorite_nodes" label="Favorite Nodes" icon="C:\Users\kuram\Documents\hsite\houdini22.0\icons\favorite_nodes.svg">
     <script scriptType="python"><![CDATA[
-import importlib.util
+import importlib
+import favorite_nodes
+importlib.reload(favorite_nodes)
+favorite_nodes.show()
+]]></script>
+  </tool>
 
-# save_next_version.py はロード（exec_module）されたトップレベルで
-# save_next_version() を直接呼び出すので、ここで改めて呼ぶ必要はない。
-script_path = hou.expandString("$HSITE/houdini22.0/scripts/krm_tool/save_next_version.py")
-spec = importlib.util.spec_from_file_location("krm_save_next_version", script_path)
-module = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(module)
+  <tool name="krm_vfl_sync" label="VFL Sync" icon="C:\Users\kuram\Documents\hsite\houdini22.0\icons\vfl_sync.svg">
+    <helpText><![CDATA[VS Code.vfl]]></helpText>
+    <script scriptType="python"><![CDATA[
+import importlib
+import vfl_sync_tool
+importlib.reload(vfl_sync_tool)
+vfl_sync_tool.show()
 ]]></script>
   </tool>
 </shelfDocument>
