@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="bridge_import" label="Import Asset" icon="SOP_usdimport">
+    <script scriptType="python"><![CDATA[
+from blender_bridge.ui import dialog
+dialog.show()
+]]></script>
+  </tool>
+
+  <tool name="bridge_inspect" label="Inspect USD" icon="BUTTONS_info">
+    <script scriptType="python"><![CDATA[
+import hou
+from blender_bridge import api
+
+path = hou.ui.selectFile(title="Select .usdc to inspect",
+                         pattern="*.usd *.usda *.usdc",
+                         chooser_mode=hou.fileChooserMode.Read)
+if path:
+    print(api.inspect_usd(hou.expandString(path)))
+]]></script>
+  </tool>
+
+  <!-- "Arcel" シェルフタブへの登録は houdini22.0/toolbar/arcel.shelf 側の
+       <toolshelf name="arcel"> が一元管理する。ここで toolshelf を重複定義しない
+       こと（同名 toolshelf を複数ファイルで宣言すると後勝ちで上書きされ、片方の
+       tool が消える。_knowledge/houdini_menu_and_shelf_python_execution.md 参照）。
+       ここでは <tool> の定義だけを持つ。 -->
+</shelfDocument>

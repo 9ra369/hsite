@@ -1,0 +1,12 @@
+{
+    "env": [
+        { "BLENDER_BRIDGE": "$HSITE/dev/houdini_blender_bridge" },
+        {
+            "PYTHONPATH": {
+                "value": "$BLENDER_BRIDGE/python",
+                "method": "append"
+            }
+        }
+    ],
+    "path": "$BLENDER_BRIDGE"
+}
